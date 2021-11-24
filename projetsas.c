@@ -2,18 +2,18 @@
 #include <conio.h>
 #include <stdlib.h>
 #include <string.h>
-//--------------------Déclaration globale du compteur des clients n --------------------------------
+//--------------------DÃ©claration globale du compteur des clients n --------------------------------
 int n = 5;
-//---------------------Déclaration de type structure compte-----------------------------------------
+//---------------------DÃ©claration de type structure compte-----------------------------------------
 typedef struct {
 		char cin[10];
 		char nom[30];
 		char prenom[30];
 		float montant;
 	} compte ;
-//--------------------Déclaration et initialisation de variable de type structure compte ----------
+//--------------------DÃ©claration et initialisation de variable de type structure compte ----------
 compte cpte[50]={{"UU100","roussafi","fahd",5000},{"UU200","ali","med",8000},{"UU300","adil","adil",100},{"UU400","med","bbbb",15000},{"UU500","kenza","zzzz",1400}};
-//-------------------fonctions de gestion des comptes bancaires -----------------------à------------
+//-------------------fonctions de gestion des comptes bancaires -----------------------Ã ------------
 void introduire(){
  	int i=n;
  	char autre;
@@ -35,19 +35,20 @@ void introduire(){
         	autre=getch();
     } while(autre!='n');  
 }
-//------------------fonctions des opérations bancaires -------------------------------------------
+//------------------fonctions des opÃ©rations bancaires -------------------------------------------
 void depot()
 {
     int i,t;
     char cin[10];
     float mt;
 	system("cls");
-	printf("\t\tDépot\n\n\n");
+	printf("\t\tDÃ©pot\n\n\n");
 	printf("Entrer CIN : ");
 	scanf("%s",cin);
 	for(i=0;i<n;i++) 
 	{
-		if (strcmp(cpte[i].cin,cin)==0)  // comparaison de cin 
+		if (strcmp(cpte[i].cin,cin)==0)	// comparaison de cin 
+			break;
         {
            t=0;                        
         }
@@ -220,7 +221,7 @@ void rechercher()	{
 	    printf("compte innexistant.\n");
 	system("pause");    
 }
-//---------------------------fonction de fidélisation ---------------------------------------------------
+//---------------------------fonction de fidÃ©lisation ---------------------------------------------------
 void fideliser()	{
      int i,j;
 	compte tmp;
@@ -244,7 +245,7 @@ void fideliser()	{
 	printf("\t\tOperation effectuee ...\n\n\n");
 	system("pause");
 }
-//-------------------------Menu des opérations bancaires -----------------------------------------------
+//-------------------------Menu des opÃ©rations bancaires -----------------------------------------------
 void menuop()
 {		
               int choix;
